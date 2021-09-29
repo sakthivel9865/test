@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="finddaycalendar.css">
+</head>
+
+<body>
+    <div class="overall">
+
+        <div class="two-cal">
+
+            <div class="box1">
+
+                <div class="head2">
+                    <input onclick="lessthan()" class="same" id="less" type="button" name="arrow" value="<">
+                    <p id="border"></p>
+                    <!-- <p id="border1"></p> -->
+
+                    <input onclick="greaterthan()" class="same" id="great" type="button" name="arrow" value=">">
+
+                </div>
+
+                <div class="head3">
+                    <div id="bright" class="c11 element">Su</div>
+                    <div id="bright" class="c12 element">Mo</div>
+                    <div id="bright" class="c13 element">Tu</div>
+                    <div id="bright" class="c14 element">We</div>
+                    <div id="bright" class="c15 element">Th</div>
+                    <div id="bright" class="c16 element">Fr</div>
+                    <div id="bright" class="c17 element">Sa</div>
+
+
+
+                    <!-- <div onclick="fun(this)" class="c22 element"></div>
+                    <div onclick="fun(this)" class="c22 element"></div>
+                    <div onclick="fun(this)" class="c22 element"></div> -->
+                    <div onclick="fun(this)" class="c22 cc1 cc2 cc3 element">1</div>
+                    <div onclick="fun(this)" class="c23 element">2</div>
+                    <div onclick="fun(this)" class="c24 element">3</div>
+                    <div onclick="fun(this)" class="c25 element">4</div>
+                    <div onclick="fun(this)" class="c26 element">5</div>
+                    <div onclick="fun(this)" class="c27 element">6</div>
+
+                    <div onclick="fun(this)" class="c31 element">7</div>
+                    <div onclick="fun(this)" class="c32 element">8</div>
+                    <div onclick="fun(this)" class="c33 element">9</div>
+                    <div onclick="fun(this)" class="c34 element">10</div>
+                    <div onclick="fun(this)" class="c35 element">11</div>
+                    <div onclick="fun(this)" class="c36 element">12</div>
+                    <div onclick="fun(this)" class="c37 element">13</div>
+
+                    <div onclick="fun(this)" class="c41 element">14</div>
+                    <div onclick="fun(this)" class="c42 element">15</div>
+                    <div onclick="fun(this)" class="c43 element">16</div>
+                    <div onclick="fun(this)" class="c44 element">17</div>
+                    <div onclick="fun(this)" class="c45 element">18</div>
+                    <div onclick="fun(this)" class="c46 element">19</div>
+                    <div onclick="fun(this)" class="c47 element">20</div>
+
+                    <div onclick="fun(this)" class="c51 element">21</div>
+                    <div onclick="fun(this)" class="c52 element">22</div>
+                    <div onclick="fun(this)" class="c53 element">23</div>
+                    <div onclick="fun(this)" class="c54 element">24</div>
+                    <div onclick="fun(this)" class="c55 element">25</div>
+                    <div onclick="fun(this)" class="c56 element">26</div>
+                    <div onclick="fun(this)" class="c57 element">27</div>
+
+                    <div onclick="fun(this)" class="c61 element">28</div>
+                    <div onclick="fun(this)" class="c62 element">29</div>
+                    <div onclick="fun(this)" class="c63 element">30</div>
+                </div>
+            </div>
+        </div>
+        <!--overall div closed-->
+        <script>
+            function fun(x) {
+                x.style.backgroundColor = "lightgray";
+            }
+            let array = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+            document.querySelector("#border").innerHTML = array[8];
+            let n = 8;
+            function lessthan() {
+                n--;
+                let set = document.querySelector("#border");
+                set.innerHTML = array[n];
+                if (n < 0) {
+                    n = 11;
+                    set.innerHTML = array[11];
+                }
+            }
+            function greaterthan() {
+                n++;
+                let set = document.querySelector("#border");
+                set.innerHTML = array[n];
+                if (n > 11) {
+                    n = 0;
+                    set.innerHTML = array[0];
+                }
+            }
+           
+            // var t = document.createElement("div");
+            // var s = 
+            // t.style.backgroundColor = "yellow";
+            // t.style.width ="10px";
+            // t.style.height ="5px";
+            // document.querySelector(".head3").append(t);
+            
+            
+            // let x = t.unshit(document.querySelector(".head3").innerHTML);
+            
+        </script>
+    </div>
+</body>
+
+</html>
+
+
+ <!-- let datechange = ["cc1","cc2"];
+ document.querySelector("#border1").innerHTML =array[23];
+ let newvalue = ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016",,"2017","2018","2019","2020","2021"]; -->
+ <!-- document.querySelector("#border1").innerHTML =array[23]; -->
